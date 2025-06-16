@@ -1,0 +1,51 @@
+.writeups-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.writeups-filter {
+  margin: 2rem 0;
+}
+.writeups-filter #search-writeups {
+  padding: 0.5rem;
+  width: 100%;
+}
+.writeups-filter .filter-tags {
+  margin-top: 1rem;
+}
+.writeups-filter .filter-tags button {
+  margin-right: 0.5rem;
+}
+
+.writeups-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.writeup-card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.writeup-card:hover {
+  transform: translateY(-5px);
+}
+.writeup-card .banner {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.writeup-card .content {
+  padding: 1.5rem;
+}
+.writeup-card .content .meta {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+.writeup-card .content .excerpt {
+  color: #444;
+}

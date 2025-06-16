@@ -1,0 +1,212 @@
+/* ===== 高级获奖卡片方案 - 完整版 ===== */
+.awards-container {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  min-height: 100vh;
+}
+
+.awards-header {
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.awards-header h1 {
+  font-size: 2.8rem;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.awards-header p {
+  color: #94a3b8;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.award-card {
+  background: rgba(30, 41, 59, 0.8);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.award-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(59, 130, 246, 0.3);
+  border-color: rgba(59, 130, 246, 0.4);
+}
+
+.award-date {
+  display: inline-block;
+  background: rgba(15, 23, 42, 0.7);
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: #3b82f6;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  backdrop-filter: blur(5px);
+}
+
+/* 关键修改：标题和排名同行 */
+.award-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.award-title {
+  font-size: 1.5rem;
+  color: #f8fafc;
+  margin: 0;
+  flex: 1;
+  min-width: 60%;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.award-position {
+  display: inline-flex;
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.award-description {
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
+
+/* 团队成员样式 */
+.award-team {
+  margin: 20px 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.team-label {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.team-label i {
+  color: #3b82f6;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.team-member {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+}
+
+.team-member i {
+  margin-right: 5px;
+  font-size: 0.8em;
+}
+
+/* Writeup按钮 */
+.award-actions {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.writeup-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  border-radius: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.writeup-btn:hover {
+  background: rgba(59, 130, 246, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.2);
+}
+
+.writeup-btn i {
+  font-size: 0.9em;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .awards-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .awards-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .award-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .award-title {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .awards-container {
+    padding: 60px 15px;
+  }
+  
+  .award-card {
+    padding: 25px;
+  }
+  
+  .team-members {
+    gap: 8px;
+  }
+}
