@@ -1083,6 +1083,26 @@ footer {
     width: 20px;
 }
 
+.footer-contact h4 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-contact h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--primary-light);
+    border-radius: 2px;
+}
+
+
+
 .footer-bottom {
     padding: 30px 0;
     text-align: center;
@@ -1224,71 +1244,6 @@ footer {
     }
 }
 
-/* 团队成员样式 */
-.team-header {
-  padding: 150px 0 80px;
-  text-align: center;
-  background: linear-gradient(rgba(15,23,42,0.9), rgba(15,23,42,0.9)), 
-              url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Crect width="100" height="100" fill="%231e293b"/%3E%3Cpath d="M0,0 L100,100 M100,0 L0,100" stroke="%231e3a8a" stroke-width="1"/%3E%3C/svg%3E');
-}
-
-.team-filters {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
-}
-
-.filter-btn {
-  padding: 10px 20px;
-  background: rgba(30,41,59,0.7);
-  color: var(--light);
-  border: 1px solid var(--primary);
-  border-radius: 30px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.filter-btn:hover {
-  background: var(--primary);
-}
-
-.filter-btn.active {
-  background: var(--primary);
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-.team-card {
-  background: rgba(30,41,59,0.7);
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(59,130,246,0.2);
-  text-align: center;
-  padding: 30px 20px;
-}
-
-.team-card-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin: 0 auto 20px;
-  border: 3px solid var(--primary);
-  overflow: hidden;
-}
-
-.team-card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 /* 导航栏 logo 样式 */
 .navbar .logo-image {

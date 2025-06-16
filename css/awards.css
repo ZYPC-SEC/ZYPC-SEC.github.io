@@ -1,16 +1,9 @@
 /* ===== 高级获奖卡片方案 - 完整版 ===== */
-.awards-container {
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-  min-height: 100vh;
-}
-
 .awards-header {
+  padding: 150px 0 80px;
   text-align: center;
-  margin-bottom: 60px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  background: linear-gradient(rgba(15,23,42,0.9), rgba(15,23,42,0.9)), 
+              url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Crect width="100" height="100" fill="%231e293b"/%3E%3Cpath d="M0,0 L100,100 M100,0 L0,100" stroke="%231e3a8a" stroke-width="1"/%3E%3C/svg%3E');
 }
 
 .awards-header h1 {
